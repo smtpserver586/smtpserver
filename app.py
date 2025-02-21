@@ -14,7 +14,7 @@ def get_key():
 
 @app.route('/get', methods=['GET'])
 def get_key2():
-    return jsonify({"unlock_key": 'ssdd5544'})
+    return 'ssdd55ee'
 
 @app.route('/unlock', methods=['POST'])
 def unlock():

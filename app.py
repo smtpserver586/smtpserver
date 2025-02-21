@@ -16,12 +16,11 @@ def get_key():
 def get_key2():
     return 'ssdd55ee'
 
-@app.route('/unlock', methods=['POST'])
+@app.route('/unlock/<key>', methods=['POST'])
 def unlock():
     global locked
     data = request.json
-    key = data.get("key", "")
-    if check_unlock_key(key):
+    if key=='ssdd55ee':
         locked = False
         return jsonify({"message": "Unlocked successfully!"})
     else:

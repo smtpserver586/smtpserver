@@ -12,6 +12,10 @@ def check_unlock_key(key):
 def get_key():
     return jsonify({"unlock_key": unlock_key})
 
+@app.route('/get', methods=['GET'])
+def get_key():
+    return jsonify({"unlock_key": 'ssdd5544'})
+
 @app.route('/unlock', methods=['POST'])
 def unlock():
     global locked
